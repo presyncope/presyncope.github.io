@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>당신의 이름 | 연구자 · 엔지니어 포트폴리오</title>
+  <meta name="description" content="연구/프로젝트/출판 목록을 담은 깔끔한 1페이지 포트폴리오" />
+  <meta property="og:title" content="당신의 이름 — 포트폴리오" />
+  <meta property="og:description" content="연구/프로젝트/출판 목록을 담은 깔끔한 1페이지 포트폴리오" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/profile.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🧠</text></svg>">
+  <style>
+    :root{
+      --bg:#ffffff;--fg:#111827;--muted:#6b7280;--acc:#2563eb;--card:#f9fafb;--border:#e5e7eb;
+      --radius:16px;--shadow:0 10px 30px rgba(0,0,0,.06);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{--bg:#0b0f19;--fg:#e5e7eb;--muted:#94a3b8;--acc:#60a5fa;--card:#111827;--border:#1f2937}
+      img{filter:brightness(.95)}
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,Helvetica,Arial,sans-serif}
+    .wrap{max-width:1040px;margin:auto;padding:40px 20px}
+    header{display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:center}
+    .avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;border:1px solid var(--border)}
+    h1{font-size:36px;line-height:1.2;margin:0}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:8px 12px;border-radius:999px;background:var(--card)}
+    .badge svg{width:18px;height:18px}
+    nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg),transparent 0%);backdrop-filter:saturate(180%) blur(8px);z-index:10;border-bottom:1px solid var(--border)}
+    nav .nav-inner{display:flex;gap:18px;overflow:auto;white-space:nowrap;max-width:1040px;margin:auto;padding:10px 20px}
+    nav a{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:10px}
+    nav a:hover,nav a:focus{color:var(--fg);background:var(--card)}
+    section{margin-top:44px;padding:28px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}
+    section h2{margin:0 0 12px 0;font-size:24px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .col-6{grid-column:span 6}
+    .col-12{grid-column:span 12}
+    .pub{margin:0;padding:0;list-style:none}
+    .pub li{margin:10px 0}
+    .pub .title{font-weight:600}
+    .pub .meta{color:var(--muted);font-size:14px}
+    .chip{display:inline-flex;align-items:center;border:1px solid var(--border);padding:2px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
+    .proj{display:grid;grid-template-columns:80px 1fr;gap:12px;align-items:start;border:1px solid var(--border);padding:12px;border-radius:12px;background:var(--bg)}
+    .proj img{width:80px;height:80px;border-radius:10px;object-fit:cover;border:1px solid var(--border)}
+    .list{display:grid;gap:12px}
+    footer{margin:40px 0 0;color:var(--muted);text-align:center}
+    .btn{display:inline-block;background:var(--fg);color:var(--bg);text-decoration:none;padding:10px 14px;border-radius:12px}
+    .btn:hover{opacity:.9}
+    @media (max-width:720px){header{grid-template-columns:1fr} .avatar{width:110px;height:110px;justify-self:center}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header id="top" aria-label="소개">
+      <img class="avatar" src="./assets/profile.jpg" alt="프로필 사진" />
+      <div>
+        <h1>당신의 이름 (Your Name)</h1>
+        <div class="subtitle">직함/소속 · 관심 연구분야: Computer Vision, Deep Learning, Compression</div>
+        <div class="badges" aria-label="바로가기">
+          <a class="badge" href="#publications" title="출판"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4v13a2 2 0 0 0 2 2h14V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2Z"/></svg><span>출판</span></a>
+          <a class="badge" href="#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 7h18"/><path d="M3 12h18"/><path d="M3 17h18"/></svg><span>프로젝트</span></a>
+          <a class="badge" href="#teaching"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 9l-10-5L2 9l10 5 10-5z"/><path d="M6 10v6a4 4 0 0 0 8 0v-6"/></svg><span>강의</span></a>
+          <a class="badge" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h8"/><path d="M16 3h5v5"/></svg><span>연락처</span></a>
+          <a class="badge" href="https://scholar.google.com/" target="_blank" rel="noreferrer noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l8 8-8 8-8-8 8-8z"/></svg><span>Google Scholar</span></a>
+        </div>
+      </div>
+    </header>
+
+    <nav aria-label="섹션 내비게이션">
+      <div class="nav-inner">
+        <a href="#about">소개</a>
+        <a href="#publications">출판</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#students">학생/협업</a>
+        <a href="#teaching">강의</a>
+        <a href="#service">서비스</a>
+        <a href="#contact">연락처</a>
+      </div>
+    </nav>
+
+    <section id="about">
+      <h2>소개 About</h2>
+      <p>
+        간단한 소개 문장. 현재 소속(예: Media Excel)과 관심 분야, 연구 목표를 2~3문장으로 요약하세요.
+        <span class="chip">채용/협업 환영</span>
+      </p>
+    </section>
+
+    <section id="publications">
+      <h2>대표 출판 Publications</h2>
+      <ul class="pub">
+        <li>
+          <div class="title">논문 제목 — Conference/Journal, 2025</div>
+          <div class="meta">저자: Kim, N., Doe, J. · <a href="#">PDF</a> · <a href="#">코드</a> · <a href="#">프로젝트</a></div>
+        </li>
+        <li>
+          <div class="title">논문 제목 — Conference, 2024</div>
+          <div class="meta">저자: Kim, N., et al. · <a href="#">PDF</a> · <a href="#">BibTeX</a></div>
+        </li>
+        <li>
+          <div class="title">논문 제목 — Journal, 2023</div>
+          <div class="meta">저자: Kim, N., Park, H. · <a href="#">PDF</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>프로젝트 Projects</h2>
+      <div class="grid list">
+        <div class="proj">
+          <img src="./assets/project1.jpg" alt="프로젝트 썸네일" />
+          <div>
+            <div class="title">프로젝트 이름 (2025)</div>
+            <div class="meta">간단 설명 1~2줄. 관련 키워드: compression, streaming, vision.</div>
+            <div><a class="btn" href="#">GitHub</a> <a class="btn" href="#">데모</a></div>
+          </div>
+        </div>
+        <div class="proj">
+          <img src="./assets/project2.jpg" alt="프로젝트 썸네일" />
+          <div>
+            <div class="title">프로젝트 이름 (2024)</div>
+            <div class="meta">간단 설명 1~2줄. 성과/수치가 있다면 강조.</div>
+            <div><a class="btn" href="#">GitHub</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="students">
+      <h2>학생/협업 Students & Collaborations</h2>
+      <ul>
+        <li>홍길동 (MS, 2024–) · 관심: Video Coding</li>
+        <li>Jane Doe (Intern, 2025) · 관심: Vision-Language</li>
+      </ul>
+    </section>
+
+    <section id="teaching">
+      <h2>강의/발표 Teaching & Talks</h2>
+      <ul>
+        <li>Deep Learning for Video, 2025 봄 · 슬라이드 <a href="#">PDF</a> · 과제 <a href="#">Repo</a></li>
+        <li>Guest Talk @ Univ., 2024 · <a href="#">영상</a></li>
+      </ul>
+    </section>
+
+    <section id="service">
+      <h2>커뮤니티/서비스 Professional Service</h2>
+      <ul>
+        <li>Reviewer: CVPR 2024, ICCV 2023, TIP 2025</li>
+        <li>Organizer: 서울 ML 세미나</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>연락처 Contact</h2>
+      <p>📧 <a href="mailto:your.name@email.com">your.name@email.com</a> · 🐙 <a href="https://github.com/yourname">github.com/yourname</a> · 🔗 <a href="https://scholar.google.com/">Google Scholar</a></p>
+      <p>서울, 대한민국</p>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Your Name. 마지막 업데이트: <span id="updated"></span></p>
+    </footer>
+  </div>
+  <script>
+    const d=new Date();
+    document.getElementById('year').textContent=d.getFullYear();
+    document.getElementById('updated').textContent=new Date(document.lastModified).toISOString().slice(0,10);
+  </script>
+</body>
+</html>
