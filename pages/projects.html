@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NamUk Kim | Projects</title>
+  <meta name="description" content="연구/프로젝트/출판 목록을 담은 깔끔한 1페이지 포트폴리오" />
+  <meta property="og:title" content="당신의 이름 — 프로젝트" />
+  <meta property="og:description" content="연구/프로젝트/출판 목록을 담은 깔끔한 1페이지 포트폴리오" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/profile.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🧠</text></svg>">
+  <style>
+    :root{
+      --bg:#ffffff;--fg:#111827;--muted:#6b7280;--acc:#2563eb;--card:#f9fafb;--border:#e5e7eb;
+      --radius:16px;--shadow:0 10px 30px rgba(0,0,0,.06);
+    }
+    
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,Helvetica,Arial,sans-serif}
+    .wrap{max-width:1040px;margin:auto;padding:40px 20px}
+    nav{position:sticky;top:0;background:#2563eb;z-index:10;border-bottom:1px solid var(--border)}
+    nav .nav-inner{display:flex;gap:18px;overflow:auto;white-space:nowrap;max-width:1040px;margin:auto;padding:15px 20px}
+    nav a{color:white;text-decoration:none;padding:8px 16px;border-radius:6px;font-weight:500}
+    nav a:hover,nav a:focus{color:white;background:rgba(255,255,255,0.2)}
+    nav a.active{color:white;background:rgba(255,255,255,0.3)}
+    section{margin-top:44px;padding:28px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}
+    section h2{margin:0 0 12px 0;font-size:24px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .col-6{grid-column:span 6}
+    .col-12{grid-column:span 12}
+    .proj{display:grid;grid-template-columns:80px 1fr;gap:12px;align-items:start;border:1px solid var(--border);padding:12px;border-radius:12px;background:var(--bg)}
+    .proj img{width:80px;height:80px;border-radius:10px;object-fit:cover;border:1px solid var(--border)}
+    .list{display:grid;gap:12px}
+    .btn{display:inline-block;background:var(--fg);color:var(--bg);text-decoration:none;padding:10px 14px;border-radius:12px}
+    .btn:hover{opacity:.9}
+    footer{margin:40px 0 0;color:var(--muted);text-align:center}
+    @media (max-width:720px){header{grid-template-columns:1fr} .avatar{width:110px;height:110px;justify-self:center}}
+  </style>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="home.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="publication.html">Publication</a>
+      <a href="patents.html">Patents</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+      <div class="nav-inner">
+        <a href="home.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="publication.html">Publication</a>
+        <a href="patents.html">Patents</a>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid list">
+        <div class="proj">
+          <img src="./assets/project1.jpg" alt="프로젝트 썸네일" />
+          <div>
+            <div class="title">프로젝트 이름 (2025)</div>
+            <div class="meta">간단 설명 1~2줄. 관련 키워드: compression, streaming, vision.</div>
+            <div><a class="btn" href="#">GitHub</a> <a class="btn" href="#">데모</a></div>
+          </div>
+        </div>
+        <div class="proj">
+          <img src="./assets/project2.jpg" alt="프로젝트 썸네일" />
+          <div>
+            <div class="title">프로젝트 이름 (2024)</div>
+            <div class="meta">간단 설명 1~2줄. 성과/수치가 있다면 강조.</div>
+            <div><a class="btn" href="#">GitHub</a></div>
+          </div>
+        </div>
+        <div class="proj">
+          <img src="./assets/project3.jpg" alt="프로젝트 썸네일" />
+          <div>
+            <div class="title">Machine Learning Pipeline (2024)</div>
+            <div class="meta">고성능 머신러닝 파이프라인 구축. PyTorch, Docker, Kubernetes 활용.</div>
+            <div><a class="btn" href="#">GitHub</a> <a class="btn" href="#">문서</a></div>
+          </div>
+        </div>
+        <div class="proj">
+          <img src="./assets/project4.jpg" alt="프로젝트 썸네일" />
+          <div>
+            <div class="title">Computer Vision Tool (2023)</div>
+            <div class="meta">실시간 객체 인식 및 추적 도구. OpenCV, TensorFlow 기반.</div>
+            <div><a class="btn" href="#">GitHub</a> <a class="btn" href="#">논문</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> NamUk Kim. Last updated: <span id="updated"></span></p>
+    </footer>
+  </div>
+  <script>
+    const d=new Date();
+    document.getElementById('year').textContent=d.getFullYear();
+    document.getElementById('updated').textContent=new Date(document.lastModified).toISOString().slice(0,10);
+  </script>
+</body>
+</html>

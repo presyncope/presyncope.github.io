@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>당신의 이름 | 연구자 · 엔지니어 포트폴리오</title>
-  <meta name="description" content="연구/프로젝트/출판 목록을 담은 깔끔한 1페이지 포트폴리오" />
-  <meta property="og:title" content="당신의 이름 — 포트폴리오" />
-  <meta property="og:description" content="연구/프로젝트/출판 목록을 담은 깔끔한 1페이지 포트폴리오" />
+  <title>NamUk Kim's Homepage</title>
+  <meta name="description" content="Clean one-page portfolio containing research, projects, and publications" />
+  <meta property="og:title" content="NamUk Kim — Portfolio" />
+  <meta property="og:description" content="Clean one-page portfolio containing research, projects, and publications" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="./assets/profile.jpg" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🧠</text></svg>">
@@ -26,10 +26,10 @@
     .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
     .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:8px 12px;border-radius:999px;background:var(--card)}
     .badge svg{width:18px;height:18px}
-    nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg),transparent 0%);backdrop-filter:saturate(180%) blur(8px);z-index:10;border-bottom:1px solid var(--border)}
-    nav .nav-inner{display:flex;gap:18px;overflow:auto;white-space:nowrap;max-width:1040px;margin:auto;padding:10px 20px}
-    nav a{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:10px}
-    nav a:hover,nav a:focus{color:var(--fg);background:var(--card)}
+    nav{position:sticky;top:0;background:#2563eb;z-index:10;border-bottom:1px solid var(--border)}
+    nav .nav-inner{display:flex;gap:18px;overflow:auto;white-space:nowrap;max-width:1040px;margin:auto;padding:15px 20px}
+    nav a{color:white;text-decoration:none;padding:8px 16px;border-radius:6px;font-weight:500}
+    nav a:hover,nav a:focus{color:white;background:rgba(255,255,255,0.2)}
     section{margin-top:44px;padding:28px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}
     section h2{margin:0 0 12px 0;font-size:24px}
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
@@ -50,76 +50,72 @@
   </style>
 </head>
 <body>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="pages/home.html">Home</a>
+      <a href="pages/projects.html">Projects</a>
+      <a href="pages/publication.html">Publication</a>
+      <a href="pages/patents.html">Patents</a>
+    </div>
+  </nav>
+
   <div class="wrap">
-    <header id="top" aria-label="소개">
-      <img class="avatar" src="./assets/profile.jpg" alt="프로필 사진" />
+    <header id="top" aria-label="Introduction">
+      <img class="avatar" src="./assets/profile.jpg" alt="Profile photo" />
       <div>
-        <h1>당신의 이름 (Your Name)</h1>
-        <div class="subtitle">직함/소속 · 관심 연구분야: Computer Vision, Deep Learning, Compression</div>
-        <div class="badges" aria-label="바로가기">
-          <a class="badge" href="#publications" title="출판"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4v13a2 2 0 0 0 2 2h14V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2Z"/></svg><span>출판</span></a>
-          <a class="badge" href="#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 7h18"/><path d="M3 12h18"/><path d="M3 17h18"/></svg><span>프로젝트</span></a>
-          <a class="badge" href="#teaching"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 9l-10-5L2 9l10 5 10-5z"/><path d="M6 10v6a4 4 0 0 0 8 0v-6"/></svg><span>강의</span></a>
-          <a class="badge" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h8"/><path d="M16 3h5v5"/></svg><span>연락처</span></a>
-          <a class="badge" href="https://scholar.google.com/" target="_blank" rel="noreferrer noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l8 8-8 8-8-8 8-8z"/></svg><span>Google Scholar</span></a>
+        <h1>NamUk Kim</h1>
+        <div class="subtitle">Principal Research Engineer at MediaExcel</div>
+        <div class="subtitle">Interested Areas: Video Enhancement, Video to Text, Video Systems, Video Compression</div>
+        <div class="badges" aria-label="Quick links">
+          <a class="badge" href="mailto:jess@mediaexcel.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>Email</span></a>
+          <a class="badge" href="https://scholar.google.com/citations?user=fQGjscMAAAAJ" target="_blank" rel="noreferrer noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 0 5-1 5-5"/></svg><span>Google Scholar</span></a>
+          <a class="badge" href="https://www.linkedin.com/in/namuk-kim-680a6323b/" target="_blank" rel="noreferrer noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span>LinkedIn</span></a>
         </div>
       </div>
     </header>
 
-    <nav aria-label="섹션 내비게이션">
-      <div class="nav-inner">
-        <a href="#about">소개</a>
-        <a href="#publications">출판</a>
-        <a href="#projects">프로젝트</a>
-        <a href="#students">학생/협업</a>
-        <a href="#teaching">강의</a>
-        <a href="#service">서비스</a>
-        <a href="#contact">연락처</a>
-      </div>
-    </nav>
-
     <section id="about">
-      <h2>소개 About</h2>
+      <h2>About</h2>
       <p>
-        간단한 소개 문장. 현재 소속(예: Media Excel)과 관심 분야, 연구 목표를 2~3문장으로 요약하세요.
-        <span class="chip">채용/협업 환영</span>
+Principal Research Engineer at MediaExcel specializing in advanced video technologies. Research focus includes video enhancement algorithms, video-to-text conversion systems, scalable video systems architecture, and next-generation video compression techniques.
+        <span class="chip">Open to collaboration</span>
       </p>
     </section>
 
     <section id="publications">
-      <h2>대표 출판 Publications</h2>
+      <h2>Publications</h2>
       <ul class="pub">
         <li>
-          <div class="title">논문 제목 — Conference/Journal, 2025</div>
-          <div class="meta">저자: Kim, N., Doe, J. · <a href="#">PDF</a> · <a href="#">코드</a> · <a href="#">프로젝트</a></div>
+          <div class="title">Paper Title — Conference/Journal, 2025</div>
+          <div class="meta">Authors: Kim, N., Doe, J. · <a href="#">PDF</a> · <a href="#">Code</a> · <a href="#">Project</a></div>
         </li>
         <li>
-          <div class="title">논문 제목 — Conference, 2024</div>
-          <div class="meta">저자: Kim, N., et al. · <a href="#">PDF</a> · <a href="#">BibTeX</a></div>
+          <div class="title">Paper Title — Conference, 2024</div>
+          <div class="meta">Authors: Kim, N., et al. · <a href="#">PDF</a> · <a href="#">BibTeX</a></div>
         </li>
         <li>
-          <div class="title">논문 제목 — Journal, 2023</div>
-          <div class="meta">저자: Kim, N., Park, H. · <a href="#">PDF</a></div>
+          <div class="title">Paper Title — Journal, 2023</div>
+          <div class="meta">Authors: Kim, N., Park, H. · <a href="#">PDF</a></div>
         </li>
       </ul>
     </section>
 
     <section id="projects">
-      <h2>프로젝트 Projects</h2>
+      <h2>Projects</h2>
       <div class="grid list">
         <div class="proj">
           <img src="./assets/project1.jpg" alt="프로젝트 썸네일" />
           <div>
-            <div class="title">프로젝트 이름 (2025)</div>
-            <div class="meta">간단 설명 1~2줄. 관련 키워드: compression, streaming, vision.</div>
-            <div><a class="btn" href="#">GitHub</a> <a class="btn" href="#">데모</a></div>
+            <div class="title">Project Name (2025)</div>
+            <div class="meta">Brief description in 1-2 lines. Related keywords: compression, streaming, vision.</div>
+            <div><a class="btn" href="#">GitHub</a> <a class="btn" href="#">Demo</a></div>
           </div>
         </div>
         <div class="proj">
           <img src="./assets/project2.jpg" alt="프로젝트 썸네일" />
           <div>
-            <div class="title">프로젝트 이름 (2024)</div>
-            <div class="meta">간단 설명 1~2줄. 성과/수치가 있다면 강조.</div>
+            <div class="title">Project Name (2024)</div>
+            <div class="meta">Brief description in 1-2 lines. Emphasize achievements/metrics if available.</div>
             <div><a class="btn" href="#">GitHub</a></div>
           </div>
         </div>
@@ -127,37 +123,32 @@
     </section>
 
     <section id="students">
-      <h2>학생/협업 Students & Collaborations</h2>
+      <h2>Students & Collaborations</h2>
       <ul>
-        <li>홍길동 (MS, 2024–) · 관심: Video Coding</li>
-        <li>Jane Doe (Intern, 2025) · 관심: Vision-Language</li>
+        <li>Hong Gil-dong (MS, 2024–) · Interest: Video Coding</li>
+        <li>Jane Doe (Intern, 2025) · Interest: Vision-Language</li>
       </ul>
     </section>
 
     <section id="teaching">
-      <h2>강의/발표 Teaching & Talks</h2>
+      <h2>Teaching & Talks</h2>
       <ul>
-        <li>Deep Learning for Video, 2025 봄 · 슬라이드 <a href="#">PDF</a> · 과제 <a href="#">Repo</a></li>
-        <li>Guest Talk @ Univ., 2024 · <a href="#">영상</a></li>
+        <li>Deep Learning for Video, Spring 2025 · Slides <a href="#">PDF</a> · Assignments <a href="#">Repo</a></li>
+        <li>Guest Talk @ Univ., 2024 · <a href="#">Video</a></li>
       </ul>
     </section>
 
     <section id="service">
-      <h2>커뮤니티/서비스 Professional Service</h2>
+      <h2>Professional Service</h2>
       <ul>
         <li>Reviewer: CVPR 2024, ICCV 2023, TIP 2025</li>
-        <li>Organizer: 서울 ML 세미나</li>
+        <li>Organizer: Seoul ML Seminar</li>
       </ul>
     </section>
 
-    <section id="contact">
-      <h2>연락처 Contact</h2>
-      <p>📧 <a href="mailto:your.name@email.com">your.name@email.com</a> · 🐙 <a href="https://github.com/yourname">github.com/yourname</a> · 🔗 <a href="https://scholar.google.com/">Google Scholar</a></p>
-      <p>서울, 대한민국</p>
-    </section>
 
     <footer>
-      <p>© <span id="year"></span> Your Name. 마지막 업데이트: <span id="updated"></span></p>
+      <p>© <span id="year"></span> NamUk Kim. Last updated: <span id="updated"></span></p>
     </footer>
   </div>
   <script>

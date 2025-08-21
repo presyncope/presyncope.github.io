@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NamUk Kim | Publication</title>
+  <meta name="description" content="연구/프로젝트/출판 목록을 담은 깔끔한 1페이지 포트폴리오" />
+  <meta property="og:title" content="당신의 이름 — 출판" />
+  <meta property="og:description" content="연구/프로젝트/출판 목록을 담은 깔끔한 1페이지 포트폴리오" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/profile.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🧠</text></svg>">
+  <style>
+    :root{
+      --bg:#ffffff;--fg:#111827;--muted:#6b7280;--acc:#2563eb;--card:#f9fafb;--border:#e5e7eb;
+      --radius:16px;--shadow:0 10px 30px rgba(0,0,0,.06);
+    }
+    
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,Helvetica,Arial,sans-serif}
+    .wrap{max-width:1040px;margin:auto;padding:40px 20px}
+    nav{position:sticky;top:0;background:#2563eb;z-index:10;border-bottom:1px solid var(--border)}
+    nav .nav-inner{display:flex;gap:18px;overflow:auto;white-space:nowrap;max-width:1040px;margin:auto;padding:15px 20px}
+    nav a{color:white;text-decoration:none;padding:8px 16px;border-radius:6px;font-weight:500}
+    nav a:hover,nav a:focus{color:white;background:rgba(255,255,255,0.2)}
+    nav a.active{color:white;background:rgba(255,255,255,0.3)}
+    section{margin-top:44px;padding:28px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}
+    section h2{margin:0 0 12px 0;font-size:24px}
+    .pub{margin:0;padding:0;list-style:none}
+    .pub li{margin:15px 0;padding:15px;border:1px solid var(--border);border-radius:12px;background:var(--bg)}
+    .pub .title{font-weight:600;font-size:18px;margin-bottom:8px}
+    .pub .meta{color:var(--muted);font-size:14px;line-height:1.5}
+    .pub .abstract{color:var(--fg);font-size:14px;margin-top:10px;line-height:1.5}
+    footer{margin:40px 0 0;color:var(--muted);text-align:center}
+    @media (max-width:720px){header{grid-template-columns:1fr} .avatar{width:110px;height:110px;justify-self:center}}
+  </style>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="home.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="publication.html" class="active">Publication</a>
+      <a href="patents.html">Patents</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+      <div class="nav-inner">
+        <a href="home.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="publication.html" class="active">Publication</a>
+        <a href="patents.html">Patents</a>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul class="pub">
+        <li>
+          <div class="title">Please add publications from Google Scholar profile</div>
+          <div class="meta">Reference: <a href="https://scholar.google.com/citations?user=fQGjscMAAAAJ&hl=ko" target="_blank">https://scholar.google.com/citations?user=fQGjscMAAAAJ&hl=ko</a></div>
+          <div class="abstract">Copy publication titles, authors, venues, years, and abstracts from the Google Scholar profile and replace this placeholder content.</div>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> NamUk Kim. Last updated: <span id="updated"></span></p>
+    </footer>
+  </div>
+  <script>
+    const d=new Date();
+    document.getElementById('year').textContent=d.getFullYear();
+    document.getElementById('updated').textContent=new Date(document.lastModified).toISOString().slice(0,10);
+  </script>
+</body>
+</html>
