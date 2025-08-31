@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Haoyang Li (李昊阳)"
+title: "Namuk Kim (김남욱)"
 author_profile: true
 redirect_from: 
   - /about/
@@ -23,6 +23,6 @@ Social Medias
 
 News
 ======
-- (21 Mar. 2025) Our paper on prompt tuning is accepted by ICME 2025.
-- (18 Mar. 2025) Our paper on prompt tuning is accepted by CVPR 2025.
+- (24 Mar. 2025) "Adaptive Video Encoding Optimization with ViT-Based Delta QP Prediction Guided by ES" is accepted by IEEE DCC 2025.
+- (24 Mar. 2025) "Optimal Adaptive Quantization Using λ-Domain and SATD-Based Rate Model" is accepted by IEEE DCC 2025.
 - (1 Jan. 2025) We establish Sota HUnTerS (SHUTS) Multi-Modal Lab.
