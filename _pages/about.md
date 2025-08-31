@@ -25,6 +25,6 @@ Social Medias
 
 News
 ======
-- (24 Mar. 2025) "Adaptive Video Encoding Optimization with ViT-Based Delta QP Prediction Guided by ES" is accepted by IEEE DCC 2025.
 - (24 Mar. 2025) "Optimal Adaptive Quantization Using λ-Domain and SATD-Based Rate Model" is accepted by IEEE DCC 2025.
+- (24 Mar. 2025) "Adaptive Video Encoding Optimization with ViT-Based Delta QP Prediction Guided by ES" is accepted by IEEE DCC 2025.
 - (1 Jan. 2025) We establish Sota HUnTerS (SHUTS) Multi-Modal Lab.
