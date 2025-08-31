@@ -12,8 +12,6 @@ author_profile: true
 教育经历
 ------
 
-
-
 | 김남욱 Senior Engineer | ![] 김남욱 서울시 강남구 광평로19길10  010-3282-1826 [presyncope@naver.com](mailto:presyncope@naver.com)  |
 | :---- | :---- |
 | **ㅡ Professional summary** | ![] 차세대 비디오 코덱  표준기술 연구 경력 5년+ (VVC) 비디오 인코딩 주관적 화질 개선 연구 및 개발 경력 2년 (Adaptive quantization, Rate control, Reinforcement learning) SIMD 및 알고리즘 최적화로 트랜스코더 병목 및 성능 향상  |
